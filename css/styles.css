@@ -20,6 +20,10 @@
   --img-background-color: #c4c4c4;
   --icon-light-color: #afb1b8;
   --icon-grey-color: #757575;
+
+/* animation */
+  --anim-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     
 }
 
 /* base styles */
@@ -105,20 +109,7 @@ img {
   color: var(--accent-text-color);
 }
 
- .site-nav .link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} 
 
-.header .link:hover,
-.header .link:focus {
-  color: var(--accent-text-color);
-}
-
-.current {
-  color: var(--accent-text-color);
-}
 
 /* navigation */
 .site-nav,
@@ -138,6 +129,23 @@ img {
 .site-nav .list-item:not(:last-child) {
   margin-right: 50px;
 }
+
+ .site-nav .link {
+   transition: color var(--anim-hover);
+ }
+
+ .site-info .link {
+   transition: color var(--anim-hover), fill var(--anim-hover);
+ }
+
+ .header .link:hover,
+ .header .link:focus {
+   color: var(--accent-text-color);
+ }
+
+ .current {
+   color: var(--accent-text-color);
+ }
 
 /* contacts */
 .site-info {
@@ -397,17 +405,11 @@ img {
   justify-content: center;
   background-color: var(--light-fill-color);
   border-radius: 50%;
-
-  transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--anim-hover), background-color var(--anim-hover);
 }
 
 .socials-icon {
   fill: var(--icon-light-color);
-  transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -446,6 +448,7 @@ img {
   background-color: var(--light-fill-color);
   border: 1px solid var(--icon-light-color);
   border-radius: 4px;
+  transition: fill var(--anim-hover), border-color var(--anim-hover);
 }
 
 .clients-icon {
@@ -493,6 +496,7 @@ img {
   background-color: var(--secondary-background-color);
   cursor: pointer;
   border-radius: 4px;
+  transition: color var(--anim-hover), background-color var(--anim-hover), box-shadow var(--anim-hover);
 }
 
 .list .button:hover,
@@ -537,6 +541,7 @@ img {
 
 .projects-card {
   display: block;
+  transition: box-shadow var(--anim-hover);
 }
 
 .projects-card:hover,
@@ -592,11 +597,14 @@ img {
 .footer-contacts {
   display: block;
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--anim-hover);
 }
 
 .footer-mail {
   margin-bottom: 9px;
 }
+
+
 .addres .link:hover,
 .addres .link:focus {
   color: var(--accent-text-color);
@@ -625,6 +633,7 @@ img {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color var(--anim-hover);
 }
 
 .footer-socials-icon {
