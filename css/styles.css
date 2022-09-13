@@ -79,8 +79,11 @@ img {
   border-bottom: 1px solid #ececec;
 }
 .header {
-  background-color: var(--light-fill-color);
-}
+  background-color: var(--light-fill-color);}
+
+
+
+
 
 .main-nav {
   display: flex;
@@ -101,6 +104,12 @@ img {
 .header-web {
   color: var(--accent-text-color);
 }
+
+ .site-nav .link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} 
 
 .header .link:hover,
 .header .link:focus {
@@ -388,9 +397,17 @@ img {
   justify-content: center;
   background-color: var(--light-fill-color);
   border-radius: 50%;
+
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .socials-icon {
   fill: var(--icon-light-color);
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
