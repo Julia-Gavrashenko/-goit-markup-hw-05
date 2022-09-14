@@ -565,6 +565,34 @@ border-bottom: 1px solid #ececec
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.card-description{
+position: relative;
+}
+
+.card-overlay{
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+padding-top: 63px;
+padding-bottom: 63px;
+padding-left: 24px;
+padding-right: 24px;
+background-color: rgba(33, 150, 243, 0.9);
+}
+
+.card-overlay-text{
+    font-size: 18px;
+    line-height: calc(28 / 18); 
+    letter-spacing: 0.03em;  
+    color:var(--light-text-color);
+}
+
+
 /* footer styles */
 
 .footer-container {
